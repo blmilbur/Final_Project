@@ -2,9 +2,8 @@
 {
     margin:0;
     box-sizing: border-box;
-    background-color: dimgray;
+    background-color: rgba(0, 0, 0, 0.63);
 }
-
 nav
 {
     height: 60px;
@@ -67,7 +66,7 @@ nav
     transition: 0.125s;
     visibility:hidden;
     opacity: 60%;
-    z-index:70;
+    z-index:80;
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.47);
 }
 .MenuItems{
@@ -88,16 +87,15 @@ a{
 
 .Splash{
     width:100%;
-    height: 100%;
+    height: 700px;
     background-color: lightslategray;
     z-index: 50;
-    position: fixed;
+    position: relative;
     border: 5px solid black;
     background-image: url("Split_Barn.jpg");
     background-size: cover;
     background-position: 50% 25%;
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.47);
-    margin-bottom: 5px;
 }
 .Tagline{
     background-color: transparent;
@@ -111,29 +109,36 @@ a{
     font-size: 70px;
     font-family: Copperplate,fantasy;
 }
+.InfoWrapper{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    bottom: 0;
+    width: 100%;
+
+}
 .InfoContainer{
-    margin: auto;
-    background-color: black;
+    background-color: rgba(0,0,0,0.77);
     display: flex;
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
     width: 100%;
-    bottom: 0%;
     height: 200px;
-    opacity: 70%;
+    opacity: 75%;
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.47);
-    z-index: 60;
-    position: absolute;
-
+    z-index: 70;
+    margin: 1px;
+    margin-bottom: 30px;
 
 }
 .InfoTitle{
     background-color:black;
     color: orangered;
     text-align: center;
-    font-family: Copperplate, fantasy;
-    margin-bottom: 25px;
+    font-family: "Brush Script MT", cursive;
+    font-size: 45px;
+    margin-bottom: 15px;
 }
 .Info{
     background-color: black;
@@ -149,14 +154,14 @@ footer{
     display: flex;
     height:25px;
     width: 100%;
-    z-index: 65;
+    z-index: 70;
     bottom: 0;
     align-items: center;
     justify-content: center;
     font-family: Copperplate, fantasy;
     color: white;
     background-color: black;
-    opacity: 65%;
+    opacity: 80%;
 }
 @media screen and (max-width: 800px){
     .Normal{
@@ -170,5 +175,8 @@ footer{
     }
     .Menu{
         visibility: visible;
+    }
+    .Tagline{
+        top: 35%;
     }
 }
